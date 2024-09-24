@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>コードでデザインを形にする｜Yuzou Yamadaポートフォリオサイト</title>
+
+    <!-- favicon -->
+    <link rel="icon" href="images/favicon.png" type="image/png">
+
+    <meta name="discription"
+        content="デザインをコードに落とし込み、SEO対応やパフォーマンスにも配慮したWebサイト制作を行っています。スライダー、アコーディオン、マウスオーバーアニメーションなど、インタラクティブな要素にも力を入れています。">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@200..900&display=swap"
+        rel="stylesheet">
+
+    <!-- リセットCSS -->
+    <link rel="stylesheet" href="https://unpkg.com/ress@4.0.0/dist/ress.min.css">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+    <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body>
+    <!-- ヘッダー -->
+    <header class="header">
+        <h1 class="header__logo"><a href="./" class="header__logo-link"><img src="images/logo.svg"
+                    alt="Yuzou Yamadaポートフォリオサイト"></a></h1>
+
+        <!-- ハンバーガー（ヘッダー）ボタン -->
+        <button type="button" class="header__open-btn" aria-label="メニューを開く">
+            <i class="bi bi-list"></i>
+        </button>
+        <button type="button" class="header__close-btn" aria-label="メニューを閉じる">
+            <i class="bi bi-x"></i>
+        </button>
+
+        <!-- ヘッダーメニュー -->
+        <div class="header__menu">
+            <nav class="header__nav">
+                <ul class="header__list">
+                    <li class="header__item"><a href="/">Top</a></li>
+                    <li class="header__item"><a href="#About_me">About Me</a></li>
+                    <li class="header__item"><a href="#skills">Skills</a></li>
+                    <li class="header__item"><a href="#works">Works</a></li>
+                    <li class="header__item"><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        <!-- /.header__menu -->
+    </header>
+
+    <!-- メイン -->
+    <main class="main">
+
+        <!-- ヒーロー -->
+        <section class="hero">
+            <div class="hero__inner">
+                <img src="images/hero.jpg" alt="" class="hero__img">
+            </div>
+            <!-- /.hero__inner -->
+        </section>
+    </main>
+
+    <!-- フッター -->
+    <footer class="footer">
+
+    </footer>
+
+    <!-- Swiper -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
