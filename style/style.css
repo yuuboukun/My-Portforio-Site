@@ -269,6 +269,12 @@ li {
 	margin-top: 64px;
 }
 
+@media (min-width: 768px) {
+	.about-me {
+		margin-top: 80px;
+	}
+}
+
 .about-me__content {
 	padding-left: 4.1vw;
 	padding-right: 4.1vw;
@@ -276,7 +282,9 @@ li {
 
 @media (min-width: 768px) {
 	.about-me__content {
-		display: flow-root;		
+		display: flow-root;
+		max-width: 1120px;
+		margin: auto;
 	}
 }
 
@@ -289,17 +297,20 @@ li {
 @media (min-width: 768px) {
 	.about-me__content-img {
 		float: left;
-		margin-right: 35px;
+		margin-top: 48px;
+		margin-right: 64px;
 	}
-}
-
-.about-me__introduction {
-	margin-top: 35px;
 }
 
 .about-me__txt {
 	line-height: 1.8;
 	font-size: 18px;
+}
+
+@media (min-width: 768px) {
+	.about-me__txt {
+		margin-top: 48px;
+	}
 }
 
 .about-me__txt + .about-me__txt {
