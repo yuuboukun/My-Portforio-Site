@@ -24,12 +24,37 @@ li {
 
 /* 部品
 ------------------------------------------ */
+/* セクションタイトル */
+.section-title {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 16px;
+}
+
+.section-title__img {
+	width: 44px;
+	object-fit: contain;
+}
+
+.section-title__txt-en {
+	font-family: 'Noto Serif JP', serif;
+	color: #057F22;
+	font-size: 18px;
+	display: block;
+}
+
+.section-title__txt-ja {
+	font-weight: bold;
+	font-size: 24px;
+	display: block;
+}
 
 /* ヘッダー
 ------------------------------------------ */
 .header {
 	position: fixed;
-	top: 28px;
+	top: 18px;
 	left: 0;
 	right: 0;
 	width: 91.8vw;
@@ -42,6 +67,7 @@ li {
 	border-radius: 32px;
 	padding-left: 7.1vw;
 	padding-right: 6.2vw;
+	z-index: 100;
 }
 
 @media (min-width: 768px) {
@@ -91,7 +117,6 @@ li {
 		width: 91.8vw;
 		margin: auto;
 		border-radius: 32px;
-		/* background-color: #fff; */
 		background-color: rgba(255, 255, 255, 0.6);
 		-webkit-backdrop-filter: blur(10px);
 		backdrop-filter: blur(10px);
@@ -167,7 +192,8 @@ li {
 	}
 
     .header__item a {
-        color: #057F22
+        color: #057F22;
+	}
 }
 
 /* ヒーロー
@@ -179,10 +205,103 @@ li {
 
 .hero__inner {
 	height: 100%;
+	position: relative;
 }
 
 .hero__img {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
+}
+
+.hero__content {
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+	color: #fff;
+}
+
+.hero__title {
+	margin-bottom: 33px;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); 
+	font-size: 24px;
+	font-weight: 500;
+}
+
+@media (min-width: 768px) {
+	.hero__title {
+		font-size: 32px;
+	}
+}
+
+.hero__title-line {
+	display: block;
+	white-space: nowrap;
+}
+
+.hero__title-line:last-child {
+	padding-left: 32px;
+}
+
+.hero__txt {
+	white-space: nowrap;
+	text-align: center;
+	font-size: 18px;
+	font-weight: 500;
+	margin-bottom: 33px;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); 
+}
+
+@media (min-width: 768px) {
+	.hero__txt {
+		font-size: 24px;
+	}
+}
+
+.hero__txt:last-child {
+	margin-bottom: 0;
+}
+
+/* 私について
+------------------------------------------ */
+.about-me {
+	margin-top: 64px;
+}
+
+.about-me__content {
+	padding-left: 4.1vw;
+	padding-right: 4.1vw;
+}
+
+@media (min-width: 768px) {
+	.about-me__content {
+		display: flow-root;		
+	}
+}
+
+.about-me__content-img {
+	display: block;
+	width: 248px;
+	margin: 35px auto;
+}
+
+@media (min-width: 768px) {
+	.about-me__content-img {
+		float: left;
+		margin-right: 35px;
+	}
+}
+
+.about-me__introduction {
+	margin-top: 35px;
+}
+
+.about-me__txt {
+	line-height: 1.8;
+	font-size: 18px;
+}
+
+.about-me__txt + .about-me__txt {
+	margin-top: 24px;
 }
