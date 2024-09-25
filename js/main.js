@@ -1,4 +1,6 @@
-// ハンバーガーメニュー
+/**
+ * ハンバーガーメニュー
+ */
 const hamburger = document.querySelector('.header__menu');
 const open = document.querySelector('.header__open-btn');
 const close = document.querySelector('.header__close-btn');
@@ -23,4 +25,26 @@ window.addEventListener('resize', () => {
 
     // ハンバーガーメニューを閉じる
     hamburger.classList.remove('js-active');
+    open.classList.remove('js-active');
+    close.classList.remove('js-active');
+});
+
+/**
+ * ヒーローカルーセル
+ */
+/**
+ * ヒーローカルーセル
+ */
+var mySwiper1 = new Swiper('.swiper1', {
+    loop: true,
+    slidesPerView: 1,
+    autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+    },
+    speed: 1000,
+    effect: 'fade', // フェードエフェクトを指定
+    fadeEffect: {
+        crossFade: true, // 画像が重なるようにフェードアウト・フェードイン
+    },
 });
