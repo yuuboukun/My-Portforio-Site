@@ -32,9 +32,6 @@ window.addEventListener('resize', () => {
 /**
  * ヒーローカルーセル
  */
-/**
- * ヒーローカルーセル
- */
 var mySwiper1 = new Swiper('.swiper1', {
     loop: true,
     slidesPerView: 1,
@@ -46,5 +43,34 @@ var mySwiper1 = new Swiper('.swiper1', {
     effect: 'fade', // フェードエフェクトを指定
     fadeEffect: {
         crossFade: true, // 画像が重なるようにフェードアウト・フェードイン
+    },
+});
+
+/**
+ * 作品集カルーセル
+ */
+const mySwiper2 = new Swiper('.swiper2', {
+    loop: true,
+    grabCursor: true,
+    navigation: {
+        prevEl: '.my-button-prev',
+        nextEl: '.my-button-next',
+    },
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+    breakpoints: {
+        // 767px以下の設定
+        0: {
+            slidesPerView: 1, // 表示するスライド数
+            slidesPerGroup: 1, // 移動するスライド数
+        },
+        // 768px以上の設定
+        768: {
+            slidesPerView: 3,
+            slidesPerGroup: 1,
+            spaceBetween: 40,
+        },
     },
 });
