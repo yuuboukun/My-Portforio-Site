@@ -57,7 +57,7 @@ const mySwiper2 = new Swiper('.swiper2', {
         nextEl: '.my-button-next',
     },
     pagination: {
-        el: '.swiper-pagination',
+        el: '.swiper-pagination-works',
         clickable: true,
     },
     breakpoints: {
