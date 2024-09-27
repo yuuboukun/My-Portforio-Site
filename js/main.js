@@ -70,7 +70,7 @@ const mySwiper2 = new Swiper('.swiper2', {
         768: {
             slidesPerView: 3,
             slidesPerGroup: 1,
-            spaceBetween: 40,
+            spaceBetween: 25,
         },
     },
 });
