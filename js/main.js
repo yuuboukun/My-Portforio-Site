@@ -47,6 +47,27 @@ var mySwiper1 = new Swiper('.swiper1', {
 });
 
 /**
+ * スキルセット交差監視
+ */
+function callback(entries, obs) {
+	entries.forEach(entry => {
+		if (!entry.isIntersecting) {
+			return;
+		}
+		entry.target.classList.add('js-appear');
+		obs.unobserve(entry.target);
+	});
+}
+
+const observer = new IntersectionObserver(callback, {
+	threshold: 0.5,
+});
+
+document.querySelectorAll('.js-animate').forEach(el => {
+	observer.observe(el);
+});
+
+/**
  * 作品集カルーセル
  */
 const mySwiper2 = new Swiper('.swiper2', {
