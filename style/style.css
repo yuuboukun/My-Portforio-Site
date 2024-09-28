@@ -259,9 +259,7 @@ html {
 
 .hero__title {
 	margin-bottom: 33px;
-	/* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);  */
 	text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.9), 0px 0px 4px rgba(0, 0, 0, 0.5);
-
 	font-size: 24px;
 	font-weight: 500;
 }
@@ -310,7 +308,7 @@ html {
 
 @media (min-width: 768px) {
 	.about-me {
-		margin-top: 80px;
+		margin-top: 88px;
 	}
 }
 
@@ -331,10 +329,6 @@ html {
 	text-align: center;
 	margin-top: 12px;
 }
-/* 
-.about-me__content-img {
-	margin-bottom: 8px;
-} */
 
 .about-me__content-image {
 	display: block;
@@ -370,12 +364,16 @@ html {
 .skills {
 	margin-top: 64px;
 	background-color: #F7FCF1;
-	padding-top: 40px;
-	padding-bottom: 40px;
+	padding-top: 60px;
+	padding-bottom: 60px;
 }
 
 @media (min-width: 768px) {
-
+	.skills {
+		margin-top: 88px;
+		padding-top: 80px;
+		padding-bottom: 80px;
+	}
 }
 
 .skills__content {
@@ -467,6 +465,15 @@ html {
 ------------------------------------------ */
 .works {
 	margin-top: 64px;
+	margin-bottom: 64px;
+}
+
+
+@media (min-width: 768px) {
+	.works {
+		margin-top: 88px;
+		margin-bottom: 88px;
+	}
 }
 
 .works__carousel {
@@ -563,17 +570,7 @@ html {
 
 /* お問合せ
 ------------------------------------------ */
-.contact {
-	max-width: 100%;
-	margin: auto;
-	background-color: rgb(206, 255, 192);
-	margin-top: 64px;
-	padding-top: 50px;
-}
-iframe {
-	width: 100%;
-	height: 980px;
-}
+
 
 /* フッター
 ------------------------------------------ */
