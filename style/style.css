@@ -623,8 +623,9 @@ html {
 /* フッター
 ------------------------------------------ */
 .footer {
+	position: relative;
 	background-color: #057F22;
-	height: 3.75rem;
+	height: 77px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -632,8 +633,12 @@ html {
 
 @media (min-width: 768px) {
 	.footer {
-		height: 4.25rem;
+		height: 80px;
 	}
+}
+
+.footer__content {
+	text-align: center;
 }
 
 .footer__copyright {
@@ -646,4 +651,14 @@ html {
 	.footer__copyright {
 		font-size: 0.75rem;
 	}
+}
+
+.image_provision {
+	font-size: 10px;
+	color: #fff;
+	margin-top: 4px;
+}
+
+.image_provision a {
+	color: yellow;
 }
