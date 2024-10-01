@@ -324,6 +324,7 @@ html {
 .image-credit {
 	text-align: center;
 	margin-top: 0.75rem;
+	font-size: 14px;
 }
 
 .about-me__content-image {
@@ -353,6 +354,18 @@ html {
 
 .about-me__txt + .about-me__txt {
 	margin-top: 1.5rem;
+}
+
+.about-me__name {
+	font-size: 1.25rem;
+	font-weight: 500;
+	text-align: center;
+}
+
+.about-me__name-roman {
+	font-family: 'Noto Serif JP', serif;
+	color: #057F22;
+	font-size: 1.125rem;
 }
 
 /* スキルセット
@@ -645,7 +658,7 @@ html {
 .footer {
 	position: relative;
 	background-color: #057F22;
-	height: 77px;
+	height: 4.8125rem;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -653,7 +666,7 @@ html {
 
 @media (min-width: 768px) {
 	.footer {
-		height: 80px;
+		height: 5rem;
 	}
 }
 
@@ -674,9 +687,9 @@ html {
 }
 
 .image_provision {
-	font-size: 10px;
+	font-size: 0.625rem;
 	color: #fff;
-	margin-top: 4px;
+	margin-top: 0.25rem;
 }
 
 .image_provision a {
