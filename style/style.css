@@ -255,6 +255,7 @@ html {
     transform: translate(-50%, -50%);
 	color: #fff;
 	z-index: 50;
+	text-align: center;
 }
 
 .hero__title {
@@ -273,10 +274,6 @@ html {
 .hero__title-line {
 	display: block;
 	white-space: nowrap;
-}
-
-.hero__title-line:last-child {
-	padding-left: 2rem;
 }
 
 .hero__txt {
