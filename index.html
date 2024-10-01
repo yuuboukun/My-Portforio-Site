@@ -38,10 +38,10 @@
                     alt="Yuzou Yamadaポートフォリオサイト"></a></h1>
 
         <!-- ハンバーガー（ヘッダー）ボタン -->
-        <button type="button" class="header__open-btn" aria-label="メニューを開く">
+        <button type="button" class="header__btn header__open-btn" aria-label="メニューを開く">
             <i class="bi bi-list"></i>
         </button>
-        <button type="button" class="header__close-btn" aria-label="メニューを閉じる">
+        <button type="button" class="header__btn header__close-btn" aria-label="メニューを閉じる">
             <i class="bi bi-x"></i>
         </button>
 
@@ -49,7 +49,7 @@
         <div class="header__menu">
             <nav class="header__nav">
                 <ul class="header__list">
-                    <li class="header__item"><a href="/">Top</a></li>
+                    <li class="header__item"><a href="#">Top</a></li>
                     <li class="header__item"><a href="#About_me">About Me</a></li>
                     <li class="header__item"><a href="#skills">Skills</a></li>
                     <li class="header__item"><a href="#works">Works</a></li>
@@ -66,15 +66,197 @@
         <!-- ヒーロー -->
         <section class="hero">
             <div class="hero__inner">
-                <img src="images/hero.jpg" alt="" class="hero__img">
+                <div class="swiper1">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="images/hero_1.webp" alt="" class="hero__img">
+                        </div>
+                        <!-- /.swiper-slide -->
+                        <div class="swiper-slide">
+                            <img src="images/hero_2.jpg" alt="" class="hero__img">
+                        </div>
+                        <!-- /.swiper-slide -->
+                        <div class="swiper-slide">
+                            <img src="images/hero_3.webp" alt="" class="hero__img">
+                        </div>
+                        <!-- /.swiper-slide -->
+                        <div class="swiper-slide">
+                            <img src="images/hero_4.webp" alt="" class="hero__img">
+                        </div>
+                        <!-- /.swiper-slide -->
+                        <div class="swiper-slide">
+                            <img src="images/hero_5.webp" alt="" class="hero__img">
+                        </div>
+                        <!-- /.swiper-slide -->
+                        <div class="swiper-slide">
+                            <img src="images/hero_6.webp" alt="" class="hero__img">
+                        </div>
+                        <!-- /.swiper-slide -->
+                    </div>
+                    <!-- /.swiper-wrapper -->
+                </div>
+                <!-- /.swiper1 -->
+
+                <div class="hero__content">
+                    <h2 class="hero__title"><span class="hero__title-line">幼い頃から</span><span
+                            class="hero__title-line">モノ作りが大好きでした！</span></h2>
+                    <p class="hero__txt">好きなことをしていると楽しいと感じる！</p>
+                    <p class="hero__txt">楽しい時間はアッという間！</p>
+                    <p class="hero__txt">眠ることさえ忘れている！</p>
+                    <p class="hero__txt">この感覚を大切にしたい！</p>
+                </div>
+                <!-- /.hero__content -->
             </div>
             <!-- /.hero__inner -->
         </section>
+
+        <!-- 私について -->
+        <section class="about-me" id="About_me">
+            <div class="section-title">
+                <img src="images/clover.png" alt="" class="section-title__img">
+                <h3 class="section-title__txt">
+                    <span class="section-title__txt-en">About Me</span>
+                    <span class="section-title__txt-ja">私について</span>
+                </h3>
+            </div>
+            <!-- /.section-title -->
+            <div class="about-me__content">
+                <div class="about-me__content-image">
+                    <img src="images/hituji.png" alt="" class="about-me__content-img">
+                    <p class="image-credit">
+                        画像提供: <a
+                            href="https://jp.freepik.com/free-photo/photorealistic-sheep-farm_186595951.htm#query=%E7%BE%8A&position=1&from_view=keyword&track=ais_hybrid&uuid=3597e6af-929c-4ae9-96e2-d74f2c2f530a">Freepik</a>
+                    </p>
+                </div>
+                <p class="about-me__txt">愛媛県新居浜市生まれ、顔はとても羊に似ています。</p>
+                <!-- <p class="about-me__txt">顔はとても羊に似ています。</p> -->
+                <p class="about-me__txt">山が好きで木々や草の葉の緑や赤を見ているととても癒されます。</p>
+                <p class="about-me__txt">現在は鍼灸とカイロプラクティックで施術所を開設しています。</p>
+                <p class="about-me__txt">趣味は格闘技で、昔は空手とキックボクシングをしていました。</p>
+                <p class="about-me__txt">将来は趣味で格闘技をしながらフリーランスでWeb制作をしたいと思っています。</p>
+                <p class="about-me__txt">2021年12月より独学でWebサイト（ドットインストールやプロゲイトなど）や書籍を利用してプログラミングの学習を始めました。</p>
+                <p class="about-me__txt">2024年5月27日からテックアカデミーで「はじめての副業コース」と「Web制作実践コース」を受講し2024年9月19日すべての課題に合格し終了致しました。</p>
+            </div>
+            <!-- /.about-me__content -->
+        </section>
+
+        <!-- スキルセット -->
+        <section class="skills" id="skills">
+            <div class="section-title">
+                <img src="images/clover.png" alt="" class="section-title__img">
+                <h3 class="section-title__txt">
+                    <span class="section-title__txt-en">Skills</span>
+                    <span class="section-title__txt-ja">スキルセット</span>
+                </h3>
+            </div>
+            <!-- /.section-title -->
+            <div class="skills__content">
+                <div class="skills__item js-animate js-from-left">
+                    <h4 class="skills__title">Webサイト制作</h4>
+                    <p class="skills__txt">
+                        ウェブサイトのデザインやレイアウトを作成できます
+                    </p>
+                </div>
+                <!-- /.skills__item -->
+                <div class="skills__item js-animate js-from-right js-delay">
+                    <h4 class="skills__title">動くWebサイト</h4>
+                    <p class="skills__txt">
+                        ウェブサイトにアニメーションによる動きを追加します
+                    </p>
+                </div>
+                <!-- /.skills__item -->
+                <div class="skills__item js-animate js-from-left js-delay-more">
+                    <h4 class="skills__title">イラスト・写真</h4>
+                    <p class="skills__txt">
+                        簡単なイラストの作成や写真の加工ができます
+                    </p>
+                </div>
+                <!-- /.skills__item -->
+            </div>
+            <!-- /.skills__content -->
+        </section>
+
+        <!-- 作品集 -->
+        <section class="works" id="works">
+            <div class="section-title">
+                <img src="images/clover.png" alt="" class="section-title__img">
+                <h3 class="section-title__txt">
+                    <span class="section-title__txt-en">Works</span>
+                    <span class="section-title__txt-ja">作品集</span>
+                </h3>
+            </div>
+            <!-- /.section-title -->
+            <div class="works__carousel">
+                <div class="swiper2">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <img src="images/Kira-Kira_Juku.png" alt="Kira-Kira_Juku" class="works__img">
+                            </a>
+                            <p class="works__txt">
+                                <span class="works__txt-title">Kira Kira Juku
+                                </span>レスポンシブデザインに対応させ、マウスオーバー時のアニメーションを工夫しました。
+                            </p>
+                        </div>
+                        <!-- /.swiper-slide -->
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <img src="images/KIRAMEKI_BEAUTY_LABO.png" alt="KIRAMEKI BEAUTY LABO" class="works__img">
+                            </a>
+                            <p class="works__txt">
+                                <span class="works__txt-title">KIRAMEKI BEAUTY LABO
+                                </span>レスポンシブデザインに対応させ、モダンで洗練されたデザインを実装しました。
+                            </p>
+                        </div>
+                        <!-- /.swiper-slide -->
+                        <div class="swiper-slide">
+                            <a href="#">                                
+                                <img src="images/Kirameki_Cream.png" alt="Kirameki Cream" class="works__img">
+                            </a>
+                            <p class="works__txt">
+                                <span class="works__txt-title">Kirameki Cream
+                                </span>レスポンシブデザインに対応させ、スライダーやアコーディオンなどのインタラクティブなアニメーションを実装しました。
+                            </p>
+                        </div>
+                        <!-- /.swiper-slide -->
+                        <div class="swiper-slide">
+                            <a href="#">                                
+                                <img src="images/Kirameki-Farm.png" alt="Kirameki Farm" class="works__img">
+                            </a>
+                            <p class="works__txt">
+                                <span class="works__txt-title">Kirameki Farm
+                                </span>レスポンシブデザインに対応させ、よくある質問はアコーディオンで、商品のギャラリーはカルーセルでページを作成しました。
+                            </p>
+                        </div>
+                        <!-- /.swiper-slide -->
+                    </div>
+                    <!-- /.swiper-wrapper -->
+                </div>
+                <!-- /.swiper2 -->
+                <div class="my-button-prev"><i class="bi bi-caret-left-square-fill"></i></div>
+                <div class="my-button-next"><i class="bi bi-caret-right-square-fill"></i></div>
+
+                <div class="swiper-pagination-works"></div>
+            </div>
+            <!-- /.works__carousel -->
+        </section>
+
+        <!-- お問合せ -->
+        <div class="contact" id="contact">
+            <img src="images/green04.webp" alt="" class="contact__img">
+            <div class="contact__btn">
+                <a href="https://forms.gle/NRf6e4XSnAw2qRzL7" title="contact button"><i class="bi bi-envelope"></i>お問い合わせ</a>
+            </div>
+        </div>
     </main>
 
     <!-- フッター -->
     <footer class="footer">
-
+        <div class="footer__content">
+            <small class="footer__copyright">© 2024 Yuzou Yamada. All rights reserved.</small>
+            <div class="image_provision">背景画像提供: <a href="https://www.pakutaso.com/">ぱくたそ</a></div>
+        </div>
+        <!-- /.footer__content -->
     </footer>
 
     <!-- Swiper -->
