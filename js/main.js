@@ -86,6 +86,7 @@ const mySwiper2 = new Swiper('.swiper2', {
         0: {
             slidesPerView: 1, // 表示するスライド数
             slidesPerGroup: 1, // 移動するスライド数
+            spaceBetween: 25,
         },
         // 768px以上の設定
         768: {
