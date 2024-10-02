@@ -537,6 +537,10 @@ html {
 	}
 }
 
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background: #057F22;
+}
+
 .works__link {
 	width: 100%;
 	height: 100%;
@@ -555,6 +559,7 @@ html {
 
 .works__txt {
 	padding: 0.625rem 1rem;
+	color: #000;
 }
 
 .works__txt-title {
