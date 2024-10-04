@@ -630,6 +630,7 @@ html {
 	background: linear-gradient(to bottom, #5f9f06, #057F22);
 	border: 0.0313rem solid #057F22;
 	box-shadow: 0.125rem 0.1875rem 0 #044d15;
+	transition: opacity 0.6s ease; 
 }
 
 .contact__btn:hover {
