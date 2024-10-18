@@ -79,6 +79,66 @@ html {
 	}
 }
 
+
+/* 交差監視アニメーション */
+@media (max-width: 767px) {
+	.js-animate {
+		opacity: 0;
+		transform: translateY(3.125rem);
+		transition: opacity .8s, transform .8s;
+	}
+
+	.js-animate.js-from-left {
+		transform: translateX(-3.125rem);
+	}
+	
+	.js-animate.js-from-right {
+		transform: translateX(3.125rem);
+	}
+
+	.js-animate.js-from-right-delay {
+		transform: translateX(3.125rem);
+		transition-delay: .8s;
+	}
+			
+	.js-animate.js-appear {
+		opacity: 1;
+		transform: none;
+	}	
+}
+
+@media (min-width: 768px) {
+	.js-animate {
+		opacity: 0;
+		transform: translateY(3.125rem);
+		transition: opacity .8s, transform .8s;
+	}
+		
+	.js-animate.js-appear {
+		opacity: 1;
+		transform: none;
+	}
+
+	.js-animate.js-delay {
+		transition-delay: .3s;
+	}
+
+	.js-animate.js-delay-more {
+		transition-delay: .6s;
+	}
+	
+	.js-animate.js-from-right-delay {
+		transform: translateX(3.125rem);
+		transition-delay: .3s;
+	}
+
+	.js-animate.js-from-right-delay.js-appear {
+		opacity: 1;
+		transform: none;
+	}	
+}
+
+
 /* ヘッダー
 ------------------------------------------ */
 .header {
@@ -321,6 +381,12 @@ html {
 	}
 }
 
+.about-me__feature {
+	margin-top: 30px;
+	padding-bottom: 12px;
+	border-bottom: 2px solid #057F22;	
+}
+
 .image-credit {
 	text-align: center;
 	margin-top: 0.75rem;
@@ -432,50 +498,6 @@ html {
 	margin-top: 1rem;
 	padding-top: 1rem;
 	border-top: 0.0625rem solid #057F22;
-}
-
-
-/* 交差監視アニメーション */
-@media (max-width: 767px) {
-	.js-animate {
-		opacity: 0;
-		transform: translateY(3.125rem);
-		transition: opacity .8s, transform .8s;
-	}
-
-	.js-animate.js-from-left {
-		transform: translateX(-3.125rem);
-	}
-	
-	.js-animate.js-from-right {
-		transform: translateX(3.125rem);
-	}
-			
-	.js-animate.js-appear {
-		opacity: 1;
-		transform: none;
-	}	
-}
-
-@media (min-width: 768px) {
-	.js-animate {
-		opacity: 0;
-		transform: translateY(3.125rem);
-		transition: opacity .8s, transform .8s;
-	}
-		
-	.js-animate.js-appear {
-		opacity: 1;
-		transform: none;
-	}
-
-	.js-animate.js-delay {
-		transition-delay: .3s;
-	}
-
-	.js-animate.js-delay-more {
-		transition-delay: .6s;
-	}
 }
 
 /* 作品集
