@@ -6,6 +6,7 @@ body {
 	font-family: 'Noto Sans JP', sans-serif;
 	font-weight: 400;
     color: #000;
+	overflow-x: hidden;
 }
 
 a {
@@ -96,9 +97,8 @@ html {
 		transform: translateX(3.125rem);
 	}
 
-	.js-animate.js-from-right-delay {
+	.js-animate.js-from-right-all {
 		transform: translateX(3.125rem);
-		transition-delay: .8s;
 	}
 			
 	.js-animate.js-appear {
@@ -127,12 +127,12 @@ html {
 		transition-delay: .6s;
 	}
 	
-	.js-animate.js-from-right-delay {
+	.js-animate.js-from-right-all {
 		transform: translateX(3.125rem);
 		transition-delay: .3s;
 	}
 
-	.js-animate.js-from-right-delay.js-appear {
+	.js-animate.js-from-right-all.js-appear {
 		opacity: 1;
 		transform: none;
 	}	
