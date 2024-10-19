@@ -51,11 +51,13 @@ var mySwiper1 = new Swiper('.swiper1', {
  */
 function callback(entries, obs) {
 	entries.forEach(entry => {
-		if (!entry.isIntersecting) {
-			return;
+		if (entry.isIntersecting) {
+			// ビューポートに入ったらクラスを追加してアニメーションを開始
+			entry.target.classList.add('js-appear');
+		} else {
+			// ビューポート外に出たらクラスを削除してアニメーションをリセット
+			entry.target.classList.remove('js-appear');
 		}
-		entry.target.classList.add('js-appear');
-		obs.unobserve(entry.target);
 	});
 }
 
