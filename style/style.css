@@ -33,6 +33,49 @@ html {
 
 /* 部品
 ------------------------------------------ */
+/* ローディング */
+#loading {
+    background-color: #fcfdfc;
+    position: fixed;
+    inset: 0;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#loading_screen {
+    background-color: #e7fddf;
+    position: fixed;
+    inset: 0;
+    z-index: 998;
+    transform: translate(0, 100vh);
+}
+
+#loading_txt {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+/* 固定背景画像 */
+.bg-img {
+    position: fixed;
+    inset: 0;
+    background-image: url('../images/sakura.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+.bg-img::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgba(255, 255, 255, 0.6); /* 透明度70%の白いマスク */
+    z-index: 1; /* マスクを背景画像の上に表示 */
+}
+
 /* セクションタイトル */
 .section-title {
 	display: flex;

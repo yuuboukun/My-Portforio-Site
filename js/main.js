@@ -1,4 +1,58 @@
 /**
+ * ローディングスクリーン
+ */
+const loadingAreaGrey = document.getElementById('loading');
+const loadingAreaGreen = document.getElementById('loading_screen');
+const loadingText = document.getElementById('loading_txt');
+
+window.addEventListener('load', () => {
+    // グレースクリーン
+    loadingAreaGrey.animate(
+        {
+            opacity: [1, 0],
+            visibility: 'hidden',
+        },
+        {
+            duration: 2000,
+            delay: 1200,
+            easing: 'ease',
+            fill: 'forwards',
+        }
+    );
+    // グリーンスクリーン
+    loadingAreaGreen.animate(
+        {
+            transform: ['translate(0, 100vh)', 'translate(0, 0)', 'translate(0, -100vh)'],
+        },
+        {
+            duration: 2000,
+            delay: 800,
+            easing: 'ease',
+            fill: 'forwards',
+        }
+    );
+    // ローディングテキスト
+    loadingText.animate(
+        [
+            {
+                opacity: 1,
+                offset: .8,
+            },
+            {
+                opacity: 0,
+                offset: 1
+            },
+        ],
+        {
+            duration: 1200,
+            easing: 'ease',
+            fill: 'forwards',
+        }
+    );
+});
+
+
+/**
  * ハンバーガーメニュー
  */
 const hamburger = document.querySelector('.header__menu');
