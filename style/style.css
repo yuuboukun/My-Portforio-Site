@@ -797,6 +797,10 @@ html {
 	font-size: 0.625rem;
 	color: #fff;
 	margin-top: 0.25rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 8px;
 }
 
 .image_provision a {
