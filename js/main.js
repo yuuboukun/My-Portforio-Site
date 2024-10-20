@@ -129,6 +129,7 @@ document.querySelectorAll('.js-animate').forEach(el => {
 const mySwiper2 = new Swiper('.swiper2', {
     loop: true,
     grabCursor: true,
+    speed: 1000, // スライドのスピードを1秒に設定
     navigation: {
         prevEl: '.my-button-prev',
         nextEl: '.my-button-next',
