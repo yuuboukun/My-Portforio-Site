@@ -131,20 +131,20 @@ html {
 @media (max-width: 767px) {
 	.js-animate {
 		opacity: 0;
-		transform: translateY(3.125rem);
+		transform: translateY(6.25rem);
 		transition: opacity .8s, transform .8s;
 	}
 
 	.js-animate.js-from-left {
-		transform: translateX(-3.125rem);
+		transform: translateX(-6.25rem);
 	}
 	
 	.js-animate.js-from-right {
-		transform: translateX(3.125rem);
+		transform: translateX(6.25rem);
 	}
 
 	.js-animate.js-from-right-all {
-		transform: translateX(3.125rem);
+		transform: translateX(6.25rem);
 	}
 			
 	.js-animate.js-appear {
@@ -156,7 +156,7 @@ html {
 @media (min-width: 768px) {
 	.js-animate {
 		opacity: 0;
-		transform: translateY(3.125rem);
+		transform: translateY(6.25rem);
 		transition: opacity .8s, transform .8s;
 	}
 		
@@ -174,7 +174,7 @@ html {
 	}
 	
 	.js-animate.js-from-right-all {
-		transform: translateX(3.125rem);
+		transform: translateX(100px);
 		transition-delay: .3s;
 	}
 
@@ -430,7 +430,8 @@ html {
 .about-me__feature {
 	margin-top: 1.875rem;
 	padding-bottom: 0.75rem;
-	border-bottom: 0.125rem solid #057F22;	
+	border-bottom: 0.125rem solid #057F22;
+	font-size: 1.25rem;
 }
 
 .image-credit {
@@ -704,11 +705,13 @@ html {
 	background: linear-gradient(to bottom, #5f9f06, #057F22);
 	border: 0.0313rem solid #057F22;
 	box-shadow: 0.125rem 0.1875rem 0 #044d15;
-	transition: opacity 0.6s ease; 
+	transition: opacity 0.6s ease, transform .6s ease; 
+	overflow: hidden;
 }
 
 .contact__btn:hover {
-	opacity: .6;
+	opacity: .8;
+	transform: scale(1.05);
 }
 
 @media (min-width: 768px) {
@@ -742,6 +745,28 @@ html {
 	.contact__btn .bi {
 		font-size: 1.125rem;
 	}
+}
+
+.hoverflash {
+	overflow: hidden;
+}
+
+.hoverflash::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 50%;
+	height: 100%;
+	background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.5) 100%);
+	transform: translateX(-150%) skewX(-45deg);
+	opacity: 0; /* 初期状態は透明 */
+	transition: transform 0.5s ease;
+}
+
+.contact__btn:hover .hoverflash::before {
+	transform: translateX(250%) skewX(-25deg);
+	opacity: 1; /* ホバー時のみ表示 */
 }
 
 /* フッター

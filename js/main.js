@@ -116,7 +116,7 @@ function callback(entries, obs) {
 }
 
 const observer = new IntersectionObserver(callback, {
-	threshold: 0.3,
+	threshold: 0.5,
 });
 
 document.querySelectorAll('.js-animate').forEach(el => {
