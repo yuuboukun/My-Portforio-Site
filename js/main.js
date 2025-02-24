@@ -58,6 +58,35 @@ window.addEventListener('load', () => {
 const hamburger = document.querySelector('.header__menu');
 const open = document.querySelector('.header__open-btn');
 const close = document.querySelector('.header__close-btn');
+const items = document.querySelectorAll('.header__item a');
+
+// メニューアイテムをクリックしたら
+items.forEach(item => {
+    item.addEventListener('click', e => {
+        const href = item.getAttribute('href');
+
+        // ハンバーガーメニューを閉じる
+        hamburger.classList.remove('js-active');
+        open.classList.remove('js-active');
+        close.classList.remove('js-active');
+
+        if (href === "#") {
+            // `#` の場合はデフォルト動作を許可（トップに戻る）
+            return;
+        }
+        e.preventDefault();
+        const target = document.querySelector(href);
+
+        if (target) {
+            const scrollPosition = target.getBoundingClientRect().top + window.scrollY - 88;
+
+            window.scrollTo({
+                top: scrollPosition,
+                behavior: 'smooth'
+            });
+        }
+    });
+});
 
 // OPENボタンをクリックしたら
 open.addEventListener('click', () => {
@@ -75,8 +104,6 @@ close.addEventListener('click', () => {
 
 // 画面幅のサイズが変わったら
 window.addEventListener('resize', () => {
-    // console.log('resize');
-
     // ハンバーガーメニューを閉じる
     hamburger.classList.remove('js-active');
     open.classList.remove('js-active');
@@ -104,23 +131,23 @@ var mySwiper1 = new Swiper('.swiper1', {
  * スキルセット交差監視
  */
 function callback(entries, obs) {
-	entries.forEach(entry => {
-		if (entry.isIntersecting) {
-			// ビューポートに入ったらクラスを追加してアニメーションを開始
-			entry.target.classList.add('js-appear');
-		} else {
-			// ビューポート外に出たらクラスを削除してアニメーションをリセット
-			entry.target.classList.remove('js-appear');
-		}
-	});
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            // ビューポートに入ったらクラスを追加してアニメーションを開始
+            entry.target.classList.add('js-appear');
+        } else {
+            // ビューポート外に出たらクラスを削除してアニメーションをリセット
+            entry.target.classList.remove('js-appear');
+        }
+    });
 }
 
 const observer = new IntersectionObserver(callback, {
-	threshold: 0.5,
+    threshold: 0.5,
 });
 
 document.querySelectorAll('.js-animate').forEach(el => {
-	observer.observe(el);
+    observer.observe(el);
 });
 
 /**
@@ -153,3 +180,54 @@ const mySwiper2 = new Swiper('.swiper2', {
         },
     },
 });
+
+/**
+ *  セクションタイトルアニメーション
+ */
+const titles = document.querySelectorAll('.section-title__txt');
+const enTexts = document.querySelectorAll('.section-title__txt-en');
+const jaTexts = document.querySelectorAll('.section-title__txt-ja');
+
+function animateText(element) {
+    const text = element.textContent.trim();
+    element.textContent = ''; // 元のテキストをクリア
+
+    text.split('').forEach((char, index) => {
+        const span = document.createElement('span');
+        span.textContent = char === ' ' ? "\u00A0" : char;
+        span.style.transitionDelay = `${index * 0.08 + 0.5}s`; // 遅延を設定
+        element.appendChild(span);
+    });
+}
+
+// テキストのアニメーションを適用
+enTexts.forEach(en => animateText(en));
+jaTexts.forEach(ja => animateText(ja));
+
+// Intersection Observer API
+const textObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('js-upLetter');
+            observer.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.5 });
+
+// 全てのタイトルを監視対象に追加
+titles.forEach(title => textObserver.observe(title));
+
+// イメージのアニメーションを適用
+const imgs = document.querySelectorAll('.section-title__img');
+
+const imgObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('js-showImg');
+            observer.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.5 });
+
+// 全てのイメージを監視対象に追加
+imgs.forEach(img => imgObserver.observe(img));
