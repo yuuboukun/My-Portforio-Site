@@ -834,22 +834,6 @@ html {
 	}
 }
 
-.footer__to-top {
-	position: absolute;
-	font-size: 2rem;
-	width: 2.5rem;
-	height: 2.5rem;
-	background-color: #057F22;
-	top: -3rem;
-	right: 1rem;
-	color: #fff;
-	line-height: 0;
-	border-radius: 0.5rem;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
 .footer__content {
 	text-align: center;
 }
@@ -864,6 +848,34 @@ html {
 	.footer__copyright {
 		font-size: 0.75rem;
 	}
+}
+
+/* トップへ */
+.to-top__wrap {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 100;
+}
+.to-top {
+    display: flex;
+	justify-content: center;
+	align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #057F22cc;
+    border: 1px solid #057F22;
+	opacity: 0;
+	transition: opacity .3s;
+}
+.to-top.js-topAppear {
+	opacity: 1;
+}
+.to-top .bi {
+    line-height: 0;
+    font-size: 28px;
+    color: #fff;
 }
 
 .image_provision {

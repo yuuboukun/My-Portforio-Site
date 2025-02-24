@@ -128,7 +128,7 @@ var mySwiper1 = new Swiper('.swiper1', {
 });
 
 /**
- * スキルセット交差監視
+ * 交差監視API
  */
 function callback(entries, obs) {
     entries.forEach(entry => {
@@ -231,3 +231,29 @@ const imgObserver = new IntersectionObserver((entries, observer) => {
 
 // 全てのイメージを監視対象に追加
 imgs.forEach(img => imgObserver.observe(img));
+
+/**
+ * トップへボタン
+ */
+// トップへスクロールするボタンの要素を取得
+const toTop = document.querySelector('.to-top');
+
+// スクロールイベントリスナーを追加
+window.addEventListener('scroll', function() {
+    // スクロール位置が300よりも下の場合、ボタンを表示する
+    if (window.scrollY > 300) {
+        toTop.classList.add('js-topAppear');
+    } else {
+        toTop.classList.remove('js-topAppear');
+    }
+});
+
+// ボタンがクリックされたときの処理
+toTop.addEventListener('click', function(e) {
+    e.preventDefault();
+    // ページトップへアニメーションでスクロールする
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});
