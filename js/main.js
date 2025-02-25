@@ -135,9 +135,7 @@ function callback(entries, obs) {
         if (entry.isIntersecting) {
             // ビューポートに入ったらクラスを追加してアニメーションを開始
             entry.target.classList.add('js-appear');
-        } else {
-            // ビューポート外に出たらクラスを削除してアニメーションをリセット
-            entry.target.classList.remove('js-appear');
+            obs.unobserve(entry.target);
         }
     });
 }
@@ -156,7 +154,7 @@ document.querySelectorAll('.js-animate').forEach(el => {
 const mySwiper2 = new Swiper('.swiper2', {
     loop: true,
     grabCursor: true,
-    speed: 1000, // スライドのスピードを1秒に設定
+    speed: 800, // スライドのスピードを1秒に設定
     navigation: {
         prevEl: '.my-button-prev',
         nextEl: '.my-button-next',
