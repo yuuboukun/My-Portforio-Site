@@ -184,6 +184,10 @@ html {
 	.js-animate.js-from-right-all {
 		transform: translateX(6.25rem);
 	}
+
+	.js-animate.js-XrotoUp {
+		transform: translateY(100px) rotateX(100deg);
+	}
 			
 	.js-animate.js-appear {
 		opacity: 1;
@@ -196,6 +200,10 @@ html {
 		opacity: 0;
 		transform: translateY(6.25rem);
 		transition: opacity .8s, transform .8s;
+	}
+
+	.js-animate.js-XrotoUp {
+		transform: translateY(100px) rotateX(100deg);
 	}
 		
 	.js-animate.js-appear {
@@ -221,7 +229,6 @@ html {
 		transform: none;
 	}	
 }
-
 
 /* ヘッダー
 ------------------------------------------ */
